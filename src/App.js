@@ -35,12 +35,12 @@ const App = props => {
         )}
       </Transition>
 
-      <Transition in={show} mountOnEnter unmountOnExit timeout={300}>
+      {/* <Transition in={show} mountOnEnter unmountOnExit timeout={300}>
         {state => (
           <Modal show={state} closed={() => setShow(prevShow => !prevShow)} />
         )}
-      </Transition>
-
+      </Transition> */}
+      <Modal show={show} closed={() => setShow(prevShow => !prevShow)} />
       <button className="Button" onClick={() => setShow(prevShow => !prevShow)}>Open Modal</button>
       <h3>Animating Lists</h3>
       <List />
